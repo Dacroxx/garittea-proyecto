@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Garittea - Álbum de Stickers</title>
+  <style>
+    :root {
+      --pink: #ec008c;
+      --green: #70b73f;
+      --orange: #f37021;
+      --gray: #333333;
+      --white: #ffffff;
+    }
+    body {
+      background-color: var(--white);
+      color: var(--gray);
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: var(--green);
+      margin-bottom: 30px;
+    }
+    .btn-back {
+      margin-bottom: 20px;
+      background-color: transparent;
+      color: var(--pink);
+      border: 2px solid var(--pink);
+      padding: 8px 16px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+    .btn-back:hover {
+      background-color: var(--pink);
+      color: var(--white);
+    }
+
+    /* 
+      Layout fijo de 4 columnas x 3 filas:
+      - Filas 1 y 2: 4 páginas cada una (página1..página8)
+      - Fila 3: 1 página (página9), centrada en las columnas 2 y 3
+      - max-width: 1200px para no expandir demasiado en pantallas enormes.
+    */
+    .album-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      justify-items: center;
+    }
+
+    .page {
+      border: 2px solid var(--green);
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+    .page h3 {
+      margin-top: 0;
+      color: var(--orange);
+    }
+    .stickers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+    .sticker {
+      background: #ffffff;
+      border: 1px dashed var(--pink);
+      padding: 15px;
+      font-size: 12px;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    /* Ubicación manual de cada página */
+    .page1 {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .page2 {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .page3 {
+      grid-column: 3;
+      grid-row: 1;
+    }
+    .page4 {
+      grid-column: 4;
+      grid-row: 1;
+    }
+    .page5 {
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .page6 {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .page7 {
+      grid-column: 3;
+      grid-row: 2;
+    }
+    .page8 {
+      grid-column: 4;
+      grid-row: 2;
+    }
+    .page9 {
+      /* Centra la 9na página en la 3ra fila (columnas 2 y 3) */
+      grid-column: 2 / span 2;
+      grid-row: 3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi Álbum de Stickers</h1>
+  <button id="btnBack" class="btn-back">← Menú Principal</button>
+  
+  <div class="album-container">
+    <!-- Página 1 -->
+    <div class="page page1">
+      <h3>Página 1</h3>
+      <div class="stickers">
+        <div class="sticker">Sticker 1</div>
+        <div class="sticker">Sticker 2</div>
+        <div class="sticker">Sticker 3</div>
+        <div class="sticker">Sticker 4</div>
+        <div class="sticker">Sticker 5</div>
+        <div class="sticker">Sticker 6</div>
+        <div class="sticker">Sticker 7</div>
+        <div class="sticker">Sticker 8</div>
+      </div>
+    </div>
+
+    <!-- Página 2 -->
+    <div class="page page2">
+      <h3>Página 2</h3>
+      <div class="stickers">
+        <div class="sticker">Sticker 1</div>
+        ...
+      </div>
+    </div>
+
+    <!-- Página 3 -->
+    <div class="page page3">
+      <h3>Página 3</h3>
+      <div class="stickers">
+        ...
+      </div>
+    </div>
+
+    <!-- Página 4 -->
+    <div class="page page4">
+      <h3>Página 4</h3>
+      <div class="stickers">
+        ...
+      </div>
+    </div>
+
+    <!-- Página 5 -->
+    <div class="page page5">
+      <h3>Página 5</h3>
+      <div class="stickers">
+        ...
+      </div>
+    </div>
+
+    <!-- Página 6 -->
+    <div class="page page6">
+      <h3>Página 6</h3>
+      <div class="stickers">
+        ...
+      </div>
+    </div>
+
+    <!-- Página 7 -->
+    <div class="page page7">
+      <h3>Página 7</h3>
+      <div class="stickers">
+        ...
+      </div>
+    </div>
+
+    <!-- Página 8 -->
+    <div class="page page8">
+      <h3>Página 8</h3>
+      <div class="stickers">
+        ...
+      </div>
+    </div>
+
+    <!-- Página 9 (Especial) -->
+    <div class="page page9">
+      <h3>Página 9 (Especial)</h3>
+      <div class="stickers">
+        <div class="sticker">Sticker Esp. 1</div>
+        <div class="sticker">Sticker Esp. 2</div>
+        <div class="sticker">Sticker Esp. 3</div>
+        <div class="sticker">Sticker Esp. 4</div>
+        <div class="sticker">Sticker Esp. 5</div>
+        <div class="sticker">Sticker Esp. 6</div>
+        <div class="sticker">Sticker Esp. 7</div>
+        <div class="sticker">Sticker Esp. 8</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btnBack = document.getElementById('btnBack');
+    btnBack.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

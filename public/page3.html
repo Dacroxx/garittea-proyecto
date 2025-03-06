@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Garittea - Página 3</title>
+  <style>
+    :root {
+      --rosa: #ec008c;
+      --verde: #70b73f;
+      --naranja: #f37021;
+      --gris: #333333;
+      --blanco: #ffffff;
+    }
+    body {
+      background-color: var(--blanco);
+      color: var(--gris);
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: var(--verde);
+      margin-bottom: 30px;
+    }
+    .btn-regresar {
+      margin-bottom: 20px;
+      background-color: transparent;
+      color: var(--rosa);
+      border: 2px solid var(--rosa);
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .btn-regresar:hover {
+      background-color: var(--rosa);
+      color: var(--blanco);
+    }
+    .stickers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .sticker {
+      background: var(--blanco);
+      border: 1px dashed var(--rosa);
+      width: 60px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--gris);
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Página 3</h1>
+  <button class="btn-regresar" onclick="window.location.href='album-home.html'">← Volver al Álbum</button>
+  
+  <div class="stickers">
+    <div class="sticker">Sticker 1</div>
+    <div class="sticker">Sticker 2</div>
+    <div class="sticker">Sticker 3</div>
+    <div class="sticker">Sticker 4</div>
+    <div class="sticker">Sticker 5</div>
+    <div class="sticker">Sticker 6</div>
+    <div class="sticker">Sticker 7</div>
+    <div class="sticker">Sticker 8</div>
+  </div>
+</body>
+</html>

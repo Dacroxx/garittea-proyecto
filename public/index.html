@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Garittea - Pantalla Inicial</title>
+  <style>
+    :root {
+      --pink: #ec008c;    /* Rosa */
+      --green: #70b73f;   /* Verde */
+      --orange: #f37021;  /* Naranja */
+      --gray: #333333;
+      --white: #ffffff;
+    }
+    body {
+      background-color: var(--white);
+      color: var(--gray);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    h1 {
+      color: var(--green);
+    }
+    button {
+      background-color: var(--pink);
+      border: none;
+      color: var(--white);
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px;
+    }
+    button:hover {
+      background-color: #c60073; /* Un tono más oscuro del rosa */
+    }
+    img {
+      width: 200px; /* Ajusta el tamaño del logo si lo deseas */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <img src="imagenes/glogo.png" alt="Garittea Logo">
+  <h1>Bienvenido a Garittea Recompensas</h1>
+  <button onclick="window.location.href='login.html'">Ingresar</button>
+  <button onclick="window.location.href='register.html'">Registrarse</button>
+</body>
+</html>

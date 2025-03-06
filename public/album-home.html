@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Garittea - Álbum Principal</title>
+  <style>
+    :root {
+      --rosa: #ec008c;
+      --verde: #70b73f;
+      --naranja: #f37021;
+      --gris: #333333;
+      --blanco: #ffffff;
+    }
+    body {
+      background-color: var(--blanco);
+      color: var(--gris);
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: var(--verde);
+      margin-bottom: 30px;
+    }
+    .btn-regresar {
+      margin-bottom: 20px;
+      background-color: transparent;
+      color: var(--rosa);
+      border: 2px solid var(--rosa);
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .btn-regresar:hover {
+      background-color: var(--rosa);
+      color: var(--blanco);
+    }
+    .grid-portadas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      justify-items: center;
+      align-items: center;
+    }
+    .portada {
+      width: 200px;
+      height: 200px;
+      border: 2px solid var(--verde);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .portada:hover {
+      transform: scale(1.05);
+    }
+    .portada img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .portada h2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.5);
+      color: var(--blanco);
+      margin: 0;
+      padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi Álbum de Stickers</h1>
+  <button class="btn-regresar" onclick="window.location.href='index.html'">← Volver al Inicio</button>
+
+  <div class="grid-portadas">
+    <div class="portada" onclick="window.location.href='page1.html'">
+      <img src="imagenes/cover1.png" alt="Portada Página 1">
+      <h2>Página 1</h2>
+    </div>
+    <div class="portada" onclick="window.location.href='page2.html'">
+      <img src="imagenes/cover2.png" alt="Portada Página 2">
+      <h2>Página 2</h2>
+    </div>
+    <div class="portada" onclick="window.location.href='page3.html'">
+      <img src="imagenes/cover3.png" alt="Portada Página 3">
+      <h2>Página 3</h2>
+    </div>
+    <div class="portada" onclick="window.location.href='page4.html'">
+      <img src="imagenes/cover4.png" alt="Portada Página 4">
+      <h2>Página 4</h2>
+    </div>
+    <div class="portada" onclick="window.location.href='page5.html'">
+      <img src="imagenes/cover5.png" alt="Portada Página 5">
+      <h2>Página 5</h2>
+    </div>
+    <div class="portada" onclick="window.location.href='page6.html'">
+      <img src="imagenes/cover6.png" alt="Portada Página 6">
+      <h2>Página 6</h2>
+    </div>
+    <div class="portada" onclick="window.location.href='page7.html'">
+      <img src="imagenes/cover7.png" alt="Portada Página 7">
+      <h2>Página 7</h2>
+    </div>
+    <div class="portada" onclick="window.location.href='page8.html'">
+      <img src="imagenes/cover8.png" alt="Portada Página 8">
+      <h2>Página 8</h2>
+    </div>
+    <div class="portada" onclick="window.location.href='page9.html'">
+      <img src="imagenes/cover9.png" alt="Portada Página 9">
+      <h2>Página 9 (Especial)</h2>
+    </div>
+  </div>
+</body>
+</html>

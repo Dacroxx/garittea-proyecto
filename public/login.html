@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Garittea - Login</title>
+  <style>
+    :root {
+      --rosa: #ec008c;
+      --verde: #70b73f;
+      --naranja: #f37021;
+      --gris: #333333;
+      --blanco: #ffffff;
+    }
+    body {
+      background-color: var(--blanco);
+      color: var(--gris);
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      text-align: center;
+    }
+    h1 {
+      color: var(--verde);
+      margin-bottom: 30px;
+    }
+    .btn-regresar {
+      margin-bottom: 20px;
+      background-color: transparent;
+      color: var(--rosa);
+      border: 2px solid var(--rosa);
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .btn-regresar:hover {
+      background-color: var(--rosa);
+      color: var(--blanco);
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: var(--rosa);
+      color: var(--blanco);
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #c60073;
+    }
+    #mensaje {
+      margin-top: 20px;
+      color: red;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Iniciar Sesión</h1>
+  <div class="container">
+    <p><strong>Usuario Fijo:</strong> Prototipo1</p>
+    <p><strong>ID Fijo:</strong> 1234567890</p>
+    <label>Usuario</label>
+    <input type="text" id="usuario" placeholder="Prototipo1">
+    <label>ID</label>
+    <input type="text" id="idUsuario" placeholder="1234567890">
+    <button id="btnLogin">Acceder al Álbum</button>
+    <button class="btn-regresar" onclick="window.location.href='index.html'">← Volver al Inicio</button>
+    <div id="mensaje"></div>
+  </div>
+
+  <script>
+    document.getElementById('btnLogin').addEventListener('click', () => {
+      const usuario = document.getElementById('usuario').value.trim();
+      const idUsuario = document.getElementById('idUsuario').value.trim();
+      const mensaje = document.getElementById('mensaje');
+      // Credenciales válidas para este prototipo
+      if (usuario === 'Prototipo1' && idUsuario === '1234567890') {
+        window.location.href = 'album-home.html';
+      } else {
+        mensaje.textContent = 'Credenciales inválidas';
+      }
+    });
+  </script>
+</body>
+</html>
